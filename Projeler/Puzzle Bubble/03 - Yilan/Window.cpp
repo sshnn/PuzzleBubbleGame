@@ -46,10 +46,10 @@ void Window::eventController()
 		
 		
 
-		//if (olay.type == sf::Event::MouseMoved) // test
+		//if (event.type == sf::Event::MouseMoved) // test
 		//{
-		//	std::cout << olay.mouseMove.x
-		//		<< ", " << olay.mouseMove.y
+		//	std::cout << event.mouseMove.x
+		//		<< ", " << event.mouseMove.y
 		//		<< "\n";
 
 		//}

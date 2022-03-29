@@ -42,6 +42,7 @@ void Game::closeGame()
 	m_window.close();
 }
 
+
 void Game::align()
 {
 	if (m_timer.getElapsedTime().asSeconds() > 20.f) {
@@ -53,30 +54,40 @@ void Game::align()
 
 void Game::endGame()
 {
-	
+	for (const auto& pos : m_gameController->m_posVec) {
+		if (pos.y > 400) {
+			closeGame();
+			printScore();
+		}
+	}
+}
+
+void Game::printScore()
+{
+	std::cout <<"CONGRATULATIONS...\n" << "SCORE: " << m_score.getElapsedTime().asSeconds() << "\n";
 }
 
 void Game::startGame(unsigned int width, unsigned int height)
 {
 	m_width = width;
 	m_height = height;
-	m_window.create(width, height, "oyun");
+	m_window.create(width, height, "Puzzle Bubble");
 
 	setGame();
 
-	saatiYenidenBaslat();
+	m_ftime.restart(); 
 	while (m_window.isOpen())
 	{
 		m_window.eventController();
 
-		if (m_saat.getElapsedTime() >= m_cerceveSuresi)
+		if (m_ftime.getElapsedTime() >= m_cerceveSuresi)
 		{
 			drawingFunction();
-			saatiYenidenBaslat();
+			m_ftime.restart();
 		}
 		else
 		{
-			sf::sleep(m_cerceveSuresi - m_saat.getElapsedTime());
+			sf::sleep(m_cerceveSuresi - m_ftime.getElapsedTime());
 		}
 
 	}
@@ -100,6 +111,7 @@ void Game::drawingFunction()
 	//std::cout << m_timer.getElapsedTime().asSeconds() << "\n"; // test
 	align();
 	m_window.finish();
+	endGame();
 }
 
 void Game::bindEvent()
@@ -114,14 +126,7 @@ void Game::bindEvent()
 
 void Game::mouseMove(int x, int y)
 {
-	/*for (auto siradaki : m_panelListesi)
-	{
-		if (siradaki->icerdemi(x, y))
-			siradaki->fareHareket(x, y);
-
-	}*/
-
-
+	
 }
 
 void Game::keyboardPressed(sf::Keyboard::Key key)
@@ -153,8 +158,7 @@ void Game::keyboardPressed(sf::Keyboard::Key key)
 	{
 		Frame::m_limit_y += 50;
 		m_gameController->lowPos(50);
-		//m_bubble->randomCircles();
-		//m_bubble->addCircle();
+
 		
 	}
 
@@ -162,8 +166,3 @@ void Game::keyboardPressed(sf::Keyboard::Key key)
 
 
 
-
-void Game::saatiYenidenBaslat()
-{
-	m_saat.restart();
-}

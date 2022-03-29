@@ -3,7 +3,6 @@
 #include "Drawable.hpp"
 
 
-// class Direction;
 
 class Circle : public Drawable
 {
@@ -20,12 +19,8 @@ public:
 	bool		m_isBumb; // çarpma
 
 
-
-	
-	//YON							m_yon;
 	sf::CircleShape				m_shape;
-	//std::shared_ptr<Direction>	m_directPtr;
 	sf::Color m_color;
 };
-typedef std::shared_ptr<Circle>	dairePtr;
-typedef std::vector<dairePtr>	daireListesi;
+typedef std::shared_ptr<Circle>	circlePtr;
+typedef std::vector<circlePtr>	circleList;

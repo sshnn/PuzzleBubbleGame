@@ -31,7 +31,7 @@ public:
 	void destroy_if(); // asýlý kaldýysa
 	
 
-	daireListesi	m_circles; // circel list
+	circleList	m_circles; // circel list
 	
 	float		m_r;
 	float		m_speed;

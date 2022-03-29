@@ -7,9 +7,9 @@ GameController::GameController(float r)
 {
 	m_r = r;
 	m_speed = r / 2;
-	dairePtr yeniDaire = Circle::makeCircle(r);
+	circlePtr newCircle = Circle::makeCircle(r);
 	//yeniDaire->m_pos = sf::Vector2f({ 270,0 });
-	m_circles.push_back(yeniDaire);
+	m_circles.push_back(newCircle);
 	
 	
 

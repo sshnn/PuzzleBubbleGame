@@ -6,24 +6,24 @@
 class Window
 {
 public:
-	Window(); // Pencere()
-	void create(unsigned int w,		// olustur
+	Window(); 
+	void create(unsigned int w,		
 		unsigned int h,
 		sf::String title);
-	void startDrawing(); // cizimeBasla
-	void finish(); // finish
-	bool isOpen(); // acýk mý
-	void eventController();// olay control
-	void draw(sf::Drawable& obj);//draw
-	void addMoveFunc(FareHareketFonksiyonu yeniFonksiyon); // hareket fonk ekle
+	void startDrawing(); 
+	void finish(); 
+	bool isOpen(); 
+	void eventController();
+	void draw(sf::Drawable& obj);
+	void addMoveFunc(FareHareketFonksiyonu yeniFonksiyon); 
 
-	void addKeyPressFunction(KlavyeFonksiyonu newFunc); //tusBasilmaFonksiyonuEkle
-	void close(); //kapat
+	void addKeyPressFunction(KlavyeFonksiyonu newFunc); 
+	void close(); 
 
 
 private:
-	sf::RenderWindow m_window; // m_pencere
-	KlavyeFonksiyonListesi	m_keyPressFunc;// m_tusBasmaFonkListesi
-	FareHareketFonkListesi	m_mouseFunc; // m_fareHareketFonkListesi
+	sf::RenderWindow m_window; 
+	KlavyeFonksiyonListesi	m_keyPressFunc;
+	FareHareketFonkListesi	m_mouseFunc; 
 
 };
