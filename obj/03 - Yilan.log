@@ -1,1 +1,5 @@
-﻿  03 - Yilan.vcxproj -> C:\Users\salih\OneDrive\Desktop\OyunProgramlamayaGiris2022-master\bin\Puzzle Bubble.exe
+﻿  Game.cpp
+C:\Users\salih\OneDrive\Desktop\OyunProgramlamayaGiris2022-master\Projeler\Puzzle Bubble\03 - Yilan\Game.cpp(27,15): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+  main.cpp
+  Generating Code...
+  03 - Yilan.vcxproj -> C:\Users\salih\OneDrive\Desktop\OyunProgramlamayaGiris2022-master\bin\Puzzle Bubble.exe

@@ -22,7 +22,6 @@ Direction::Direction(float size)
 }
 
 
-
 void Direction::draw(Window& window)
 {
 	
@@ -41,7 +40,7 @@ void Direction::setAngle()
 	switch (m_direction)
 	{
 	case YON::YON_SOL:
-		if (m_degree != 20)
+		if (m_degree != 35)
 		{
 			m_degree -= 5.f;
 			m_direction = YON::YON_YUKARI; // degrees(0)
@@ -50,7 +49,7 @@ void Direction::setAngle()
 		}
 		
 	case YON::YON_SAG:
-		if (m_degree != 160 )
+		if (m_degree != 145 )
 		{
 			m_degree += 5.f;
 			m_direction = YON::YON_YUKARI;
@@ -67,3 +66,4 @@ void Direction::setAngle()
 	
 	
 }
+

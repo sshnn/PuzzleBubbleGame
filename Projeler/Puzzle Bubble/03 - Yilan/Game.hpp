@@ -18,8 +18,8 @@ public:
 	void keyboardPressed(sf::Keyboard::Key tus); // klavyeBasildi
 	void setGame();
 	void closeGame();
-
-	
+	void align(); // süreye baðlý oyunu daraltýr
+	void endGame();
 
 private:
 	void saatiYenidenBaslat();
@@ -28,6 +28,7 @@ private:
 	bubblePtr			m_gameController;
 	directionPtr		m_direction;
 	sf::Time			m_cerceveSuresi;
+	sf::Clock			m_timer;
 	Window				m_window;
 	sf::Clock			m_saat;
 	int					m_fps;

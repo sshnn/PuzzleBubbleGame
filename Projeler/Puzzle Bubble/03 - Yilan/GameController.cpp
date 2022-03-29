@@ -11,14 +11,14 @@ GameController::GameController(float r)
 	//yeniDaire->m_pos = sf::Vector2f({ 270,0 });
 	m_circles.push_back(yeniDaire);
 	
-
+	
 
 
 	
 
 	
 }
-
+float GameController::m_degree{};
 std::vector<sf::Vector2f> GameController::m_posVec{};
 std::vector<sf::Color> GameController::m_colorVec{};
 
@@ -33,6 +33,14 @@ void GameController::randomCircles(float f )
 	m_colorVec.push_back(yeniDaire->m_color);
 	m_konumVec.push_back(yeniDaire->m_konum);*/
 }
+
+float GameController::set_degree(float degree)
+{
+	m_direct_degree = degree;
+	return m_direct_degree;
+}
+
+
 
 
 
@@ -74,10 +82,14 @@ void GameController::controller()
 
 
 					// last item
+					if (m_circles.size() < 2)
+					{
+						std::cout << "ali veli\n";
+					}
 					destroy(m_circles, m_circles.size() - 2);
 					destroy(m_colorVec, m_colorVec.size() - 1);
 					destroy(m_posVec, m_posVec.size() - 1);
-
+					
 					break;
 									
 				}
@@ -104,8 +116,9 @@ void GameController::draw(Window& window)
 
 void GameController::collision()
 {
-
+	
 	y_limit();
+	x_limit();
 	circleCollision();
 	controller();
 	
@@ -143,10 +156,21 @@ void GameController::y_limit()
 	}
 }
 
+void GameController::x_limit()
+{
+	if (m_circles.back()->m_pos.x <= 30 || m_circles.back()->m_pos.x >= 570) {
+		m_degree =  180 - 2 * m_direct_degree ;
+		std::cout << m_direct_degree << "\n";
+	}
+}
+
 void GameController::throwCircle(float degree)
 {
-	if (m_circles.back()->m_isBumb == false)
-		m_circles.back()->throwCircle(degree);
+	
+
+	if (m_circles.back()->m_isBumb == false) {
+		m_circles.back()->throwCircle(degree + m_degree);
+	}
 }
 
 

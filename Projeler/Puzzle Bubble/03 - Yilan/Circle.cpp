@@ -1,6 +1,6 @@
 #include "Circle.hpp"
 #include "Window.hpp"
-#include "Direction.hpp"
+//#include "Direction.hpp"
 #include "Frame.hpp"
 
 
@@ -48,5 +48,7 @@ void Circle::draw(Window& window)
     m_shape.setPosition(m_pos);
 	window.draw(m_shape);
 }
+
+
 
 

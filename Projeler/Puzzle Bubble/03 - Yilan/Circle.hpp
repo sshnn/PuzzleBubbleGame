@@ -3,7 +3,7 @@
 #include "Drawable.hpp"
 
 
-class Direction;
+// class Direction;
 
 class Circle : public Drawable
 {
@@ -13,7 +13,7 @@ public:
 	void throwCircle(float f);
 	sf::Color randColor();
 	virtual void draw(Window& pencere) override;
-
+	
 	
 	float		m_r; // radius
 	float		m_speed;

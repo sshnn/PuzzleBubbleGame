@@ -42,6 +42,20 @@ void Game::closeGame()
 	m_window.close();
 }
 
+void Game::align()
+{
+	if (m_timer.getElapsedTime().asSeconds() > 20.f) {
+		Frame::m_limit_y += 50;
+		m_gameController->lowPos(50);
+		m_timer.restart();
+	}
+}
+
+void Game::endGame()
+{
+	
+}
+
 void Game::startGame(unsigned int width, unsigned int height)
 {
 	m_width = width;
@@ -81,9 +95,10 @@ void Game::drawingFunction()
 
 	m_gameController->draw(m_window);
 	m_gameController->throwCircle(m_direction->m_degree);
-
+	m_gameController->set_degree(m_direction->m_degree);
 	
-
+	//std::cout << m_timer.getElapsedTime().asSeconds() << "\n"; // test
+	align();
 	m_window.finish();
 }
 
@@ -130,8 +145,8 @@ void Game::keyboardPressed(sf::Keyboard::Key key)
 	if (key == sf::Keyboard::Space )
 	{
 		
-		
 		m_gameController->m_circles.back()->m_isBumb = false;
+		m_gameController->m_degree = 0;
 		
 	}
 	if (key == sf::Keyboard::Enter)

@@ -12,7 +12,7 @@ public:
 	virtual void draw(Window& window) override;
 	void chanceAngle(YON);
 	void setAngle(); // rotate
-
+	
 
 	sf::RectangleShape m_arrow;
 	
