@@ -56,7 +56,7 @@
     <ClInclude Include="GameController.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="TemelTurler.hpp">
+    <ClInclude Include="BasicTypes.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Direction.hpp">

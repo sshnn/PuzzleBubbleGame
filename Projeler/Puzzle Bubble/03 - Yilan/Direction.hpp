@@ -1,7 +1,7 @@
 #pragma once
 
 #include "Drawable.hpp"
-#include "TemelTurler.hpp"
+#include "BasicTypes.hpp"
 
 class Direction : public Drawable
 {
@@ -10,7 +10,7 @@ public:
 
 	// Inherited via Cizilebilir
 	virtual void draw(Window& window) override;
-	void chanceAngle(YON);
+	void chanceAngle(DIRECTION);
 	void setAngle(); // rotate
 	
 
@@ -18,7 +18,7 @@ public:
 	
 	float		m_size;
 	float		m_degree;
-	YON			m_direction;
+	DIRECTION			m_direction;
 	
 };
 

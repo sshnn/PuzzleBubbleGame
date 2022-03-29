@@ -2,7 +2,7 @@
 #include "Window.hpp"
 #include "GameController.hpp"
 #include "Direction.hpp"
-#include "TemelTurler.hpp"
+
 
 class Frame;
 
@@ -23,12 +23,12 @@ public:
 	void printScore();
 
 private:
-	void saatiYenidenBaslat();
+
 	std::shared_ptr<Frame> m_frame;
 	circlePtr			m_circle; 
 	bubblePtr			m_gameController;
 	directionPtr		m_direction;
-	sf::Time			m_cerceveSuresi;
+	sf::Time			m_frameTimer;
 	sf::Clock			m_score;
 	sf::Clock			m_timer;
 	Window				m_window;

@@ -3,21 +3,16 @@
 #include "Direction.hpp"
 #include <iostream> // test
 
-GameController::GameController(float r)
+GameController::GameController(float r) : m_r{r}, m_speed{r / 2}
 {
-	m_r = r;
-	m_speed = r / 2;
+	
 	circlePtr newCircle = Circle::makeCircle(r);
 	//yeniDaire->m_pos = sf::Vector2f({ 270,0 });
 	m_circles.push_back(newCircle);
-	
-	
+	m_isFinish = false;
 
-
-	
-
-	
 }
+
 float GameController::m_degree{};
 std::vector<sf::Vector2f> GameController::m_posVec{};
 std::vector<sf::Color> GameController::m_colorVec{};
@@ -82,9 +77,10 @@ void GameController::controller()
 
 
 					// last item
-					if (m_circles.size() < 2)
+					if (m_posVec.size() == 1)
 					{
-						std::cout << "ali veli\n";
+						m_isFinish = true;
+						return;
 					}
 					destroy(m_circles, m_circles.size() - 2);
 					destroy(m_colorVec, m_colorVec.size() - 1);
@@ -160,7 +156,7 @@ void GameController::x_limit()
 {
 	if (m_circles.back()->m_pos.x <= 30 || m_circles.back()->m_pos.x >= 570) {
 		m_degree =  180 - 2 * m_direct_degree ;
-		std::cout << m_direct_degree << "\n";
+		// std::cout << m_direct_degree << "\n";
 	}
 }
 

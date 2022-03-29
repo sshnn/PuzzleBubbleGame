@@ -1,18 +1,15 @@
 #include "Circle.hpp"
 #include "Window.hpp"
-//#include "Direction.hpp"
 #include "Frame.hpp"
+#include <cmath>
 
 
-Circle::Circle(const float r)
+Circle::Circle(const float r) : m_r{r}, m_speed{r / 2}, m_isBumb{true}
 {
 	m_pos = sf::Vector2f(270, 540);
-    m_r = r;
-	m_speed = r / 2;
 	m_shape.setRadius(r);
-	m_isBumb = true;
     m_shape.setFillColor(randColor());
-	m_shape.setOutlineThickness(2);
+	m_shape.setOutlineThickness(1);
 	m_shape.setOutlineColor(sf::Color::White);
 	
 }
@@ -24,8 +21,6 @@ std::shared_ptr<Circle> Circle::makeCircle(float r)
 
 
 
-#include <cmath>
-#include <iostream>
 #define PI 3.14159265
 void Circle::throwCircle(float angle)
 {	

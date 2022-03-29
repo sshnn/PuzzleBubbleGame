@@ -37,6 +37,7 @@ public:
 	float		m_speed;
 	float		m_direct_degree;
 	static float m_degree;
+	bool		m_isFinish;
 	
 
 	//std::shared_ptr<Izgara> m_izgara;

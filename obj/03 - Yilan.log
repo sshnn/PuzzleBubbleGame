@@ -1,14 +1,5 @@
-﻿  GameController.cpp
-C:\Users\salih\OneDrive\Desktop\OyunProgramlamayaGiris2022-master\Projeler\Puzzle Bubble\03 - Yilan\GameController.cpp(89,45): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
-C:\Users\salih\OneDrive\Desktop\OyunProgramlamayaGiris2022-master\Projeler\Puzzle Bubble\03 - Yilan\GameController.cpp(90,47): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
-C:\Users\salih\OneDrive\Desktop\OyunProgramlamayaGiris2022-master\Projeler\Puzzle Bubble\03 - Yilan\GameController.cpp(91,43): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
-C:\Users\salih\OneDrive\Desktop\OyunProgramlamayaGiris2022-master\Projeler\Puzzle Bubble\03 - Yilan\GameController.cpp(133,19): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
-C:\Users\salih\OneDrive\Desktop\OyunProgramlamayaGiris2022-master\Projeler\Puzzle Bubble\03 - Yilan\GameController.cpp(150,38): warning C4244: '=': conversion from 'int' to 'T', possible loss of data
-          with
-          [
-              T=float
-          ]
-C:\Users\salih\OneDrive\Desktop\OyunProgramlamayaGiris2022-master\Projeler\Puzzle Bubble\03 - Yilan\GameController.cpp(180,16): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
-C:\Users\salih\OneDrive\Desktop\OyunProgramlamayaGiris2022-master\Projeler\Puzzle Bubble\03 - Yilan\GameController.cpp(181,16): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
-C:\Users\salih\OneDrive\Desktop\OyunProgramlamayaGiris2022-master\Projeler\Puzzle Bubble\03 - Yilan\GameController.cpp(183,9): warning C4244: 'return': conversion from 'float' to 'int', possible loss of data
+﻿  main.cpp
+  Game.cpp
+C:\Users\salih\OneDrive\Desktop\OyunProgramlamayaGiris2022-master\Projeler\Puzzle Bubble\03 - Yilan\Game.cpp(19,15): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+  Generating Code...
   03 - Yilan.vcxproj -> C:\Users\salih\OneDrive\Desktop\OyunProgramlamayaGiris2022-master\bin\Puzzle Bubble.exe

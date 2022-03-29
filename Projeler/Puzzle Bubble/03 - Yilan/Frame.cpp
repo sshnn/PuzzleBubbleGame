@@ -1,6 +1,6 @@
 #include "Frame.hpp"
 #include "Window.hpp"
-Frame::Frame()
+Frame::Frame() 
 {
 	m_verticalLimit.setFillColor(sf::Color::Blue);
 	m_horizontalLimit.setFillColor(sf::Color::Blue);

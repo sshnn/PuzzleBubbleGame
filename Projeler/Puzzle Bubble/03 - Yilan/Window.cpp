@@ -1,10 +1,6 @@
 #include "Window.hpp"
 
-Window::Window()
-{
-	
-	
-}
+
 
 void Window::create(unsigned int genislik, unsigned int yukseklik, sf::String baslik)
 {
@@ -43,8 +39,6 @@ void Window::eventController()
 				next(event.key.code);
 				
 		}
-		
-		
 
 		//if (event.type == sf::Event::MouseMoved) // test
 		//{
@@ -62,14 +56,14 @@ void Window::draw(sf::Drawable& sekil)
 
 }
 
-void Window::addMoveFunc(FareHareketFonksiyonu yeniFonksiyon)
+void Window::addMoveFunc(mouseMoveFunctions func) // FareHareketFonksiyonu
 {
-	m_mouseFunc.push_back(yeniFonksiyon);
+	m_mouseFunc.push_back(func);
 }
 
-void Window::addKeyPressFunction(KlavyeFonksiyonu yeniFonk)
+void Window::addKeyPressFunction(keyboardFunc func) // KlavyeFonksiyonu
 {
-	m_keyPressFunc.push_back(yeniFonk);
+	m_keyPressFunc.push_back(func);
 	
 
 }

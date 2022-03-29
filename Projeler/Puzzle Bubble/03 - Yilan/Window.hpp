@@ -1,12 +1,12 @@
 #pragma once
 #include<sfml/Graphics.hpp>
-#include "TemelTurler.hpp"
+#include "BasicTypes.hpp"
 
 
 class Window
 {
 public:
-	Window(); 
+	Window() = default; 
 	void create(unsigned int w,		
 		unsigned int h,
 		sf::String title);
@@ -15,15 +15,15 @@ public:
 	bool isOpen(); 
 	void eventController();
 	void draw(sf::Drawable& obj);
-	void addMoveFunc(FareHareketFonksiyonu yeniFonksiyon); 
+	void addMoveFunc(mouseMoveFunctions yeniFonksiyon);
 
-	void addKeyPressFunction(KlavyeFonksiyonu newFunc); 
+	void addKeyPressFunction(keyboardFunc newFunc);
 	void close(); 
 
 
 private:
 	sf::RenderWindow m_window; 
-	KlavyeFonksiyonListesi	m_keyPressFunc;
-	FareHareketFonkListesi	m_mouseFunc; 
+	keyboardFuncList	m_keyPressFunc;
+	mouseMoveFuncList  	m_mouseFunc;
 
 };

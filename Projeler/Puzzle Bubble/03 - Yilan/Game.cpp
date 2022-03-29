@@ -2,22 +2,12 @@
 #include <iostream>
 #include "Frame.hpp"
 #include "Circle.hpp"
-#include "Direction.hpp"
+  
 
 
-
-
-Game::Game()
+Game::Game() : m_fps{60}
 {
-	m_fps = 60;
-	m_cerceveSuresi = sf::seconds(1.0f / m_fps);
-	
-
-
-}
-
-Game::~Game()
-{
+	m_frameTimer = sf::seconds(1.0f / m_fps);
 }
 
 
@@ -54,8 +44,8 @@ void Game::align()
 
 void Game::endGame()
 {
-	for (const auto& pos : m_gameController->m_posVec) {
-		if (pos.y > 400) {
+	for (const auto& pos : m_gameController->m_posVec ) {
+		if (pos.y > 400 || m_gameController->m_isFinish) {
 			closeGame();
 			printScore();
 		}
@@ -64,7 +54,10 @@ void Game::endGame()
 
 void Game::printScore()
 {
-	std::cout <<"CONGRATULATIONS...\n" << "SCORE: " << m_score.getElapsedTime().asSeconds() << "\n";
+	if(m_gameController->m_isFinish)
+		std::cout <<"CONGRATULATIONS...\n" << "SCORE: " << m_score.getElapsedTime().asSeconds() << "\n";
+	else
+		std::cout << "GAME OVER!!!\n" << "SCORE: " << m_score.getElapsedTime().asSeconds() << "\n";
 }
 
 void Game::startGame(unsigned int width, unsigned int height)
@@ -80,14 +73,14 @@ void Game::startGame(unsigned int width, unsigned int height)
 	{
 		m_window.eventController();
 
-		if (m_ftime.getElapsedTime() >= m_cerceveSuresi)
+		if (m_ftime.getElapsedTime() >= m_frameTimer)
 		{
 			drawingFunction();
 			m_ftime.restart();
 		}
 		else
 		{
-			sf::sleep(m_cerceveSuresi - m_ftime.getElapsedTime());
+			sf::sleep(m_frameTimer - m_ftime.getElapsedTime());
 		}
 
 	}
@@ -98,7 +91,7 @@ void Game::drawingFunction()
 	m_window.startDrawing();
 
 
-	//std::cout << m_direction->m_derece << "\n";
+
 	m_frame->draw(m_window);
 	
 	m_direction->draw(m_window);
@@ -107,8 +100,7 @@ void Game::drawingFunction()
 	m_gameController->draw(m_window);
 	m_gameController->throwCircle(m_direction->m_degree);
 	m_gameController->set_degree(m_direction->m_degree);
-	
-	//std::cout << m_timer.getElapsedTime().asSeconds() << "\n"; // test
+
 	align();
 	m_window.finish();
 	endGame();
@@ -134,18 +126,18 @@ void Game::keyboardPressed(sf::Keyboard::Key key)
 
 	if (key == sf::Keyboard::Right)
 	{
-		m_direction->chanceAngle(YON::YON_SAG);
+		m_direction->chanceAngle(DIRECTION::DIRECTION_RIGHT);
 		
 	}
 	if (key == sf::Keyboard::Left)
 	{
-		m_direction->chanceAngle(YON::YON_SOL);
+		m_direction->chanceAngle(DIRECTION::DIRECTION_LEFT);
 		
 	}
 	if (key == sf::Keyboard::Up)
 	{
 		
-		m_direction->chanceAngle(YON::YON_YUKARI);
+		m_direction->chanceAngle(DIRECTION::DIRECTION_UP);
 	}
 	if (key == sf::Keyboard::Space )
 	{
@@ -156,8 +148,8 @@ void Game::keyboardPressed(sf::Keyboard::Key key)
 	}
 	if (key == sf::Keyboard::Enter)
 	{
-		Frame::m_limit_y += 50;
-		m_gameController->lowPos(50);
+		/*Frame::m_limit_y += 50;
+		m_gameController->lowPos(50);*/
 
 		
 	}
@@ -165,4 +157,8 @@ void Game::keyboardPressed(sf::Keyboard::Key key)
 }
 
 
+
+Game::~Game()
+{
+}
 
