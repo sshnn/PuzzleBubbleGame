@@ -1,6 +1,7 @@
 # PuzzleBubbleGame
 
-![PuzzleBubble_SS](https://user-images.githubusercontent.com/86054050/162518983-7910dc2e-7ee8-458e-850a-276abc504580.PNG)
+![puzzle](https://user-images.githubusercontent.com/86054050/165362498-35d02042-1157-4086-bb68-b19d2b44e48b.png)
+
 
 
 for the original:
