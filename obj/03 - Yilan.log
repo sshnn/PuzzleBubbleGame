@@ -1,4 +1,6 @@
-﻿  GameController.cpp
+﻿  Game.cpp
+C:\Users\salih\OneDrive\Desktop\PuzzleBubbleGame\PuzzleBubble\Puzzle Bubble\03 - Yilan\Game.cpp(17,15): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+  GameController.cpp
 C:\Users\salih\OneDrive\Desktop\PuzzleBubbleGame\PuzzleBubble\Puzzle Bubble\03 - Yilan\GameController.cpp(73,45): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
 C:\Users\salih\OneDrive\Desktop\PuzzleBubbleGame\PuzzleBubble\Puzzle Bubble\03 - Yilan\GameController.cpp(74,47): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
 C:\Users\salih\OneDrive\Desktop\PuzzleBubbleGame\PuzzleBubble\Puzzle Bubble\03 - Yilan\GameController.cpp(75,43): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
@@ -11,28 +13,6 @@ C:\Users\salih\OneDrive\Desktop\PuzzleBubbleGame\PuzzleBubble\Puzzle Bubble\03 -
 C:\Users\salih\OneDrive\Desktop\PuzzleBubbleGame\PuzzleBubble\Puzzle Bubble\03 - Yilan\GameController.cpp(164,16): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
 C:\Users\salih\OneDrive\Desktop\PuzzleBubbleGame\PuzzleBubble\Puzzle Bubble\03 - Yilan\GameController.cpp(165,16): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
 C:\Users\salih\OneDrive\Desktop\PuzzleBubbleGame\PuzzleBubble\Puzzle Bubble\03 - Yilan\GameController.cpp(167,9): warning C4244: 'return': conversion from 'float' to 'int', possible loss of data
-  Circle.cpp
-C:\Users\salih\OneDrive\Desktop\PuzzleBubbleGame\PuzzleBubble\Puzzle Bubble\03 - Yilan\Circle.cpp(27,37): warning C4244: '-=': conversion from 'double' to 'T', possible loss of data
-          with
-          [
-              T=float
-          ]
-C:\Users\salih\OneDrive\Desktop\PuzzleBubbleGame\PuzzleBubble\Puzzle Bubble\03 - Yilan\Circle.cpp(28,37): warning C4244: '-=': conversion from 'double' to 'T', possible loss of data
-          with
-          [
-              T=float
-          ]
-C:\Users\salih\OneDrive\Desktop\PuzzleBubbleGame\PuzzleBubble\Puzzle Bubble\03 - Yilan\Circle.cpp(33,12): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
-  Direction.cpp
-  Frame.cpp
-C:\Users\salih\OneDrive\Desktop\PuzzleBubbleGame\PuzzleBubble\Puzzle Bubble\03 - Yilan\Frame.cpp(19,20): warning C4244: '=': conversion from 'int' to 'T', possible loss of data
-          with
-          [
-              T=float
-          ]
   main.cpp
-  Game.cpp
-C:\Users\salih\OneDrive\Desktop\PuzzleBubbleGame\PuzzleBubble\Puzzle Bubble\03 - Yilan\Game.cpp(17,15): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-  Window.cpp
   Generating Code...
   03 - Yilan.vcxproj -> C:\Users\salih\OneDrive\Desktop\PuzzleBubbleGame\bin\Puzzle Bubble.exe
